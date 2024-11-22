@@ -42,6 +42,37 @@
         <p>&copy; 2024 Savings Group. All Rights Reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script>
+        const button = document.querySelector('btn');
+
+    
+function calculateInterest(tierAmount) {
+    let interestRate;
+
+    switch (tierAmount) {
+        case 10000:
+            interestRate = 0.05;
+            break;
+        case 20000:
+            interestRate = 0.10;
+            break;
+        case 30000:
+            interestRate = 0.20;
+            break;
+        default:
+            console.log("Invalid tier selected.");
+            return;
+    }
+
+    const weeklyInterest = tierAmount * interestRate;
+    console.log(`For Tier ${tierAmount}, your weekly interest is ${weeklyInterest} Naira.`);
+}
+
+// Test the function
+calculateInterest(10000);
+calculateInterest(20000);
+calculateInterest(30000);
+
+    </script>
 </body>
 </html>
