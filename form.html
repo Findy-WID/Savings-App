@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Savings Registration</h1>
+        <p>Register your savings and see your interest earned!</p>
+    </header>
+
+    <section class="form-container">
+        <form id="registration-form">
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" placeholder="Enter your name" required>
+
+            <label for="savings-tier">Select Savings Tier:</label>
+            <select id="savings-tier" required>
+                <option value="" disabled selected>Select your tier</option>
+                <option value="10000">Tier 1: 10,000 Naira (5% interest)</option>
+                <option value="20000">Tier 2: 20,000 Naira (10% interest)</option>
+                <option value="30000">Tier 3: 30,000 Naira (20% interest)</option>
+            </select>
+
+            <button type="submit" class="btn">Calculate Interest</button>
+        </form>
+
+        <div id="result" class="result-section" style="display: none;">
+            <h3>Registration Successful!</h3>
+            <p><strong>Student Name:</strong> <span id="result-name"></span></p>
+            <p><strong>Selected Tier:</strong> <span id="result-tier"></span></p>
+            <p><strong>Weekly Interest:</strong> <span id="result-interest"></span></p>
+            <p><strong>Total Withdrawal:</strong> <span id="result-total"></span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Savings Group. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
